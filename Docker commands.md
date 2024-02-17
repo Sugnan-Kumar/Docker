@@ -24,11 +24,11 @@ Docker run command is combination of both create and start
 
 docker run -it --name <container name> <image name> 
 
-Ex: docker run -it --name demo1 ubuntu(interactive mode)
+Ex: docker run -it --name demo1 ubuntu bash (interactive mode)
 
 docker run -dt --name <container name> <image name> 
 
-Ex: docker run -dt --name demo1 ubuntu ( Detached mode)
+Ex: docker run -dt --name demo2 ubuntu bash ( Detached mode)
 
 docker pause <container name>
 
@@ -49,3 +49,14 @@ docker rm $(docker ps -aq)
 Can kill running containers
 
 docker kill <container name>
+
+To check docker container details 
+go to /var/lib/docker/containers it has all the containers listed 
+
+ps fxa | grep docker -A 3
+
+docker attach <container-ID> (not harm to primary process)
+
+docker exec -it <container-ID> bash (this starts secondary process)
+
+
