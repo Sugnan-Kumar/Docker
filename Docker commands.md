@@ -12,7 +12,7 @@ docker info
 
 usermod -aG docker root
 
-service start docker 
+service docker start 
 
 docker info
 
@@ -28,7 +28,7 @@ Ex: docker run -it --name demo1 ubuntu(interactive mode)
 
 docker run -dt --name <container name> <image name> 
 
-Ex: docker run -it --name demo1 ubuntu ( Detached mode)
+Ex: docker run -dt --name demo1 ubuntu ( Detached mode)
 
 docker pause <container name>
 
